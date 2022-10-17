@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>git and github for beginner tutorial</h1>
+
+    <h3>step: 1</h3>
+    <p>Any time we commit somethig we shod know who did this</p>
+    <p> => gb@GB:/media/gb/vs code/github$ git config --global user.name "******" </p>
+    <p> => gb@GB:/media/gb/vs code/github$ git config --global user.email *******@gmail.com</p><br>
+
+    <h3>step: 2</h3>
+    <p>set default branch name</p>
+    <p> => gb@GB:/media/gb/vs code/github$ git config --global init.default branch main</p>
+
+    <h3>step: 3</h3>
+    <p>initialising directory for git</p>
+    <p> => gb@GB:/media/gb/vs code/github/test$ git init</p>
+    <h4>output</h4>
+    <p> Initialized empty Git repository in /media/gb/vs code/github/test/.git/</p>
+
+    <br><p>if any comand dont know what it do</p>
+    <p> => gb@GB:/media/gb/vs code/github/test$ git config -h</p>
+
+    <h3>step: 4</h3>
+    <p>turn this into git repository</p>
+    <p>go to the folder where the files are located</p>
+    <p> => gb@GB:/media/gb/vs code/github/test$ git init</p>
+    <h4>output</h4>
+    <p>Reinitialized existing Git repository in /media/gb/vs code/github/test/.git/</p>
+
+    <h3>step: 5</h3>
+    <p>check our repository status</p>
+    <p> => gb@GB:/media/gb/vs code/github/test$ git status</p>
+    <p>all the file in our repository will show in red colore the file shown in red colore are untracked files</p>
+
+    <h3>step: 6</h3>
+    <p>to track a file we need to add it to git then only we can track it</p>
+    <p> => gb@GB:/media/gb/vs code/github/test$ git add filename.txt(what ever the formate)</p>
+    <p>after we add the file use the => git status command to check the file whether it is tracked by the git if it tracks the file will shown in green colore</p>
+    <br>
+    <p>for what ever reason we no longer track the file mens we need to untrack the file</p>
+    <p> => gb@GB:/media/gb/vs code/github/test$ git rm --cached filename.txt(what ever the formate)</p>
+    <p>after we add the file use the => git status command to check the file</p>
+    <br>
+    <p>to track all the files we can use the folling comands</p>
+    <p> => gb@GB:/media/gb/vs code/github/test$ git add .</p>
+    <p> => gb@GB:/media/gb/vs code/github/test$ git status</p>
+    <p> => gb@GB:/media/gb/vs code/github/test$ git add --all</p>
+    <p>after we add it it sits in staging untill you redy to commit them</p>
+
+    <br>
+    <h4>log fils or auto generated files are what ever file we need not to include we can hide it by adding a file name called .gitignore with out .txt file in the git repositery add the comand  </h4>
+    <p> => # ignore all .txt files</p>
+    <p> => *.txt </p>
+    <p>and save the file and then check using => git status</p>
+    <br>
+    <h3>step: 7</h3>
+    <p>commit all the files commit means knothing but a take a snape of the file currently it looks like in other words it is a checkpoint in the game after we died we respan in the checkpoint</p>
+    <p> => gb@GB:/media/gb/vs code/github/test$ git commit -m "what ever the commant you need to add with the file "</p>
+    <p>this message will go along with the file</p>
+    <p>now check the status it wont show any file it show On branch master nothing to commit, working tree clean</p>
+    <p>if you change anything in the file it will be identify by the git we can check it by useing => git status command</p>
+
+    <h4>to check what is modified</h4>
+    <p> => gb@GB:/media/gb/vs code/github/test$ git diff</p>
+    <p>it will show the changes</p>
+    <br>
+    <h4>to get file from staged back to the working repositery</h4>
+    <p> => gb@GB:/media/gb/vs code/github/test$ git restore --staged index.htm</p>
+
+
+    <h4>to update my file directly from repositery to commit with out staging </h4>
+    <p> => gb@GB:/media/gb/vs code/github/test$ git restore --staged filename.txt(what ever the formate)</p>
+
+
+
+    <h4>remove files from repository with git</h4>
+    <p> => gb@GB:/media/gb/vs code/github/test$ git rm "secret recipe.htm"</p>
+    <p>after deleting this check git status it deduct the file was delited because it is one of the file git was tracking</p>
+
+
+
+    <br>
+    <h4>to change file name in git</h4>
+    <p> => gb@GB:/media/gb/vs code/github/test$ git mv "old filename.txt(what ever the formate)" "new filename.txt(what ever the formate)"</p>
+
+    <h4>to see all the logs</h4>
+    <p> => gb@GB:/media/gb/vs code/github/test$ git log</p>
+
+    <p>to get a log in one line means use the bellow command</p>
+    <p> => gb@GB:/media/gb/vs code/github/test$ git log --oneline</p>
+
+    <p>to get a detailed log of a every singel commit use the bellow command</p>
+    <p> => gb@GB:/media/gb/vs code/github/test$ git log -p</p>
+
+    <p>git helps to jump back to the previous command</p>
+    <p> => gb@GB:/media/gb/vs code/github/test$ git reset c193894</p>
+
+
+
+    <br>
+    <h4>branch uses</h4>
+    <p>to see what are all the branch present</p>
+    <p> => gb@GB:/media/gb/vs code/github/test$ git branch</p>
+
+    <p>to create a new branch </p>
+    <p> => gb@GB:/media/gb/vs code/github/test$ git branch fixTemp(fixTemp is the branch name i created)</p>
+
+    <p>it not only create a new branch it will switchs to the new branch</p>
+    <p> => gb@GB:/media/gb/vs code/github/test$ git switch -c updateText</p>
+
+    <p>after creating the branch name we need to switch to the branch </p>
+    <p>the * in front of the branch name indicates the current branch we are in</p>
+    <p> => gb@GB:/media/gb/vs code/github/test$ git switch fixTemp</p>
+
+    <p>after switch to the new branch we can access the same files with out distrubing them we can change them hear it wont affect file in the other branch</p>
+    <p>if the file is satisfied we can merge it</p>
+    <p>but before that go back to the master branch</p>
+    <p> => gb@GB:/media/gb/vs code/github/test$ git merge -m "Merge fixTemp back to main" fixTemp</p>
+
+    <p>to delit the branch </p>
+    <p> => gb@GB:/media/gb/vs code/github/test$ git branch -d fixTemp</p>
+
+    <h3>Merge conflicts</h3>
+
+    <p> => gb@GB:/media/gb/vs code/github/test$ git switch -c updateText</p>
+    <p>after creating the new branch we editing the one of the file on the new branch we created and after that we commit it in the same branch and then go back to the master branch and once again we editing the file  and try to merge it merge it show an error we can fix it by going to the file manager and open the file we edited and there are two sections of file one is the head that means the true file and the second one is the edited file just simply delit the section we dont need and save it and commit the file directly with git commit -a -m "direct commit"</p>
+
+    <h1>Getting into github</h1>
+    
+    <p>after initialising the git repository and go to the github and create new repository and type git remote add origin and the link then git branch -M main and git push -u origin main  </p>
+    
+
+
+
+</body>
+</html>
