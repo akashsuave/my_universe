@@ -91,8 +91,10 @@
 
 
 
-//DECLARATION (var, let. const)
+// #2  (00:08:02) variables ❎
 
+
+//DECLARATION (var, let. const)
 
 let firstname = 'bro';
 let age = 21;
@@ -108,6 +110,28 @@ document.getElementById('p1').textContent = 'Hello ' + firstname;
 document.getElementById('p2').innerHTML = 'You are now ' + age + ' years old';
 document.getElementById('p3').innerHTML = 'enrole = ' + student;
 
+
+//#3  (00:16:32) arithmetic expressions 🧮
+
+
+// /* arethmetic expression */
+// let students = 20;
+// students = students + 1
+// students = students - 1;
+// students = students * 2;
+// students = students / 2;
+// students = students % 3;
+// console.log(students);
+
+/* operator precedence
+1. parenthesis ()
+2. exponents
+3. multiplication & division
+4. addition & subtraction */
+
+
+
+/* #4  (00:21:14) user input 🧮 */
 
 
 //========== How to accept user input =================================
@@ -172,7 +196,7 @@ circumference = 2 * PI * radius;
 
 console.log('The circumference of a Circle is ', circumference);
 
-// =============== MATHs =============
+// =============== #7  (00:33:13) Math 🔣 =============
 let a = 3.14;
 let b = -3.14;
 let c = 4;
@@ -189,6 +213,11 @@ console.log('the abs value of -3.14 is ', Math.abs(b));
 console.log('the maximum value of a,b,c and d is', Math.max(a, b, c, d)); // finding the maximum value
 console.log('the manimum value of a,b,c and d is', Math.min(a, b, c, d)); // finding the manimum value
 console.log('the pi value of 3 is ', e = Math.PI); // it is simelur to other finding the pi value means we only need to use this manner e = Math.PI
+
+
+
+//#8  (00:36:52) hypotenuse calc practice program 📐
+
 
 let f;
 let g;
