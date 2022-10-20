@@ -290,7 +290,7 @@ document.getElementById("increaseBtn").onclick = function(){
 }
 
 
-//finding a randum number 
+//#10 (00:46:52) random number generator 🎲 finding a randum number 
 //================================== exam:5 ==========================
 let i = Math.floor(Math.random() * 6)+ 1 ; //in this statement we have to find a random number * 6 means getting a random number between 0 to 5 if we want to start from 1 means add  + 1 in the end to start from 1 
 let j = Math.floor(Math.random() * 6)+ 1 ;
@@ -301,7 +301,7 @@ console.log("j =", j);
 console.log("k =", k);
 
 
-//another example for random number generator function
+// another example for random number generator function 
 // example: 5
 let l;
 let m;
@@ -319,7 +319,19 @@ document.getElementById("rollButton").onclick = function(){
 
 }
 
-//============================ USEFULL STRING PROPERTIES AND METHODS ================
+/* Exam 5.1 */
+
+document.getElementById("mtBtn").onclick = function(){
+  
+    document.getElementById("first").innerHTML = Math.round(Math.random() * 6) + 1;
+    document.getElementById("second").innerHTML = Math.round(Math.random() * 6) + 1;
+    document.getElementById("second2").innerHTML = Math.round(Math.random() * 6) + 1;
+    document.getElementById("second3").innerHTML = Math.round(Math.random() * 6) + 1;
+    document.getElementById("thired").innerHTML = Math.round(Math.random() * 6) + 1;
+ }
+
+
+//============================#11 (00:50:53) useful string methods 🧵 USEFULL STRING PROPERTIES AND METHODS ================
 
 let userName = "Bro Code";
 let lastName = "  aakaash   ";
@@ -348,7 +360,7 @@ let letter = assainName.charAt(0).toUpperCase();
 console.log('letter = ',letter);
 
 
-//================== STRING SLICING =========================
+//================== #12 (00:55:13) string slicing ✂️ STRING SLICING =========================
 
 let fullName = "Akash suave";
 
@@ -356,8 +368,8 @@ let fullName = "Akash suave";
 // let subName = fullName.slice(6, 11);
 
 
-firstName = fullName.slice(0, fullName.indexOf(" "));
-subName = fullName.slice(fullName.indexOf(" ") + 1);//in this line we are slicing the crux with the help of indexOf and the + 1 means after the gap because computers number starts from 0 1 2 so in this line the gap we finding is zero 
+let firstName = fullName.slice(0, fullName.indexOf(" "));
+let subName = fullName.slice(fullName.indexOf(" ") + 1);//in this line we are slicing the crux with the help of indexOf and the + 1 means after the gap because computers number starts from 0 1 2 so in this line the gap we finding is zero 
 
 console.log('firstName =', firstName);
 console.log('subName =', subName);
@@ -386,7 +398,7 @@ document.getElementById("findBtn").onclick = function(){
 }
 
 
-//=================== IF STATEMENT BASIC FORM ====================
+//=================== #14 (01:01:03) if statements ❔ IF STATEMENT BASIC FORM ====================
 //This is a basic form of IF Statement
 
 let roleNumber = 70;
@@ -516,6 +528,24 @@ else{
     console.log("The Weather is bad");
 }
 
+//exam: 1.1
+
+let climate = -10;
+
+switch(true){
+    case climate >= 0 && climate <= 30:
+        console.log("it's good to go out there");
+        break;
+    case climate < 0:
+        console.log("it's cold out side");
+        break;
+    case climate > 30:
+        console.log("it's worm out side");
+        break;
+    default:
+        console.log(`&{climate} is not a climate`);            
+}
+
 //exam: 2
 let temp2 = 20;
 let sunny = true;
@@ -537,6 +567,22 @@ if(temp <= 0 || temp >= 30){
 else {
     console.log("the weather is bad");
 }
+
+
+
+let climate1 = 15;
+
+switch(true){
+    case climate1 <= 0 || climate1 > 30:
+        console.log("it's not good to go out there");
+        break;
+   
+    default:
+        console.log(`it's  good to go outside`);            
+}
+
+
+
  
 // (!) not operator
 
@@ -635,7 +681,7 @@ console.log("BREAK and COUNTINUE");
 
 
 
- //==================== FUNCTION ===============
+ //==================== #24 (01:38:05) functions ☎️ FUNCTION ===============
  // define code once and use it many times 
  // to performe some code call the function name
 
@@ -671,7 +717,7 @@ function happyBirthday(uName, uAge){
 startProgram();
 
 
-//================== RETURN FUNCTION ================
+//================== #25 (01:42:43) return statement 🔙 RETURN FUNCTION ================
 
 let area;
 let width;
@@ -715,7 +761,10 @@ console.log(area);
 
 
 
-//===================== TERNARY OPERATOR ===========================
+//===================== #26 (01:45:36) ternary operator ❔ TERNARY OPERATOR ===========================
+//shotcut for an if/elsestatement and switch statement
+
+// condition with ? expression if true : expression if false;
 let adult =  checkAge(22);
 
 
@@ -724,6 +773,31 @@ function checkAge(age){
     return age >= 18 && age <=25 ? true : false;
 }
 console.log(adult);
+
+//++++++++++++++++++ another example ++++++++++++
+
+let adult1 = checkAge(21);
+
+function checkAge(age){
+    // if(age >= 18){
+    //     return true;           /* first method */
+    // }
+    // else{
+    //     return false;
+    // }
+
+    // switch(true){
+    //     case age >= 18:
+    //         return true;      /* second method */
+    //         break;
+    //  default:   
+    //  return false;    
+    // }
+
+    return age >= 18 ? true : false;        /* thired method */
+}
+
+console.log(adult1);
 
 //++++++++++++++++++ another example ++++++++++++
 
@@ -742,7 +816,7 @@ document.getElementById("ageBtn").onclick = function(){
 
 
 
-//=================== TEMPLATE LITERALS ============================
+//=================== #28 (01:53:25) template literals 💬 TEMPLATE LITERALS ============================
 
 let aName = "bro";
 let items =3;
