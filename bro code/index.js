@@ -799,7 +799,7 @@ function checkAge(age){
 
 console.log(adult1);
 
-//++++++++++++++++++ another example ++++++++++++
+//++++++++++++++++++ another example +++++++++++
 
 //Example: 9
 document.getElementById("ageBtn").onclick = function(){
