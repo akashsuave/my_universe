@@ -863,7 +863,7 @@ myNum = myNum.toLocaleString(undefined, {style: "unit", unit: "celsius"}); // in
 console.log(myNum);
 
 
-//===================== NUMBER GUESSING GAME ===================
+//===================== #30 (02:02:47) number guessing game 🔢 NUMBER GUESSING GAME ===================
 //Example: 11
 let guesses = 0;
 
@@ -890,7 +890,7 @@ document.getElementById("guessBtn").onclick = function(){
 }
 
 
-//=================== TEMPERATURE CONVERSION PROGRAM =====================
+//=================== #31 (02:06:55) temperature conversion program 🌡️ TEMPERATURE CONVERSION PROGRAM =====================
 
 // basic problem
 
