@@ -1067,6 +1067,113 @@ console.log(sum(o, p, q, r, s));
 // }
 
 
+
+
+//============ Fey anothe array methods ===========
+
+let food = [
+    { name: "plain Biriyani", price: 100},
+    { name: "chicken Biriyani", price: 150},
+    { name: "Mutton Biriyani", price: 300},
+    { name: "Fish Biriyani", price: 200},
+    { name: "Pron Biriyani", price: 250},
+    { name: "Crow Biriyani", price: 50},
+    { name: "Beaf iriyani", price: 190},
+    { name: "Chicken Soup", price: 70},
+    { name: "Mutton Soup", price: 90},
+    { name: "Dog Soup", price: 20},
+    { name: "Cat Soup", price: 10},
+
+];
+// Filter Method // filter method filter the items what we want in this case we filtering the price less than < 100
+console.log("Filter Method ======");
+let filteredElement = food.filter(item =>{
+    return item.price < 100;
+})
+
+console.log(filteredElement);
+
+
+
+
+// map method
+console.log("map method ======");
+let mapElements = food.map(item => {
+    return item.price;
+});
+
+console.log(`this is a map method ${mapElements}`);
+
+
+
+
+// find method // find method find the element what we want in this case in this case we find the cate soup
+console.log("find method ======");
+let findElement = food.find(item => {
+    return item.name === "Cat Soup";
+
+});
+console.log(findElement);
+
+
+
+
+// forEach 
+console.log("forEach method ======");
+let forEachElement =  food.forEach(item => {
+    console.log(item.price * 2);
+});
+
+
+
+
+// some // some function will give the boolean value if the argument given by us is satisfied it will give the true or false
+console.log("some method ======");
+
+let someElement = food.some(item => {
+    return item.price < 50;
+});
+console.log(someElement);
+
+
+
+
+
+// every // every function will give the boolean value it is not like some function some function only check item.price is less than 50 but in every function it check all the elements inside the array and has to satisfied the condition then only it gives the true if the cindition is not satisfied by any one of the element it give the  false
+console.log("every method ======");
+
+let hasExpensiveItems = food.every(item => {
+    return item.price >= 10 && item.price <= 300;
+});
+console.log(hasExpensiveItems);
+
+
+
+
+// reduce // what we are doing hear is reducing the value by adding every thing we can do this in another way using foor loop by crating dummy varliabel and assaining 0 for that and adding the items with the dummy variable
+console.log("reduce ======");/* 1 */
+let sumTotal = food.reduce((currentTotal, item) => {// we are giving currentTotal as an argument to the functon and assaining 0  to the function 
+    return item.price + currentTotal;
+} , 0); // this  , 0 is not mandetory in the forloop we need to assain a value 0 to add the items but in hear no need to do that this the 0 we assained to the currentTotal by adding like thid ( ,0) the 0 is go to the first place
+console.log(sumTotal);
+
+
+
+
+// includes
+console.log("includes ======");// with the includes we can check the value is pressent inside the array or not it gives only the boolean value as a result
+let itemList = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+console.log(itemList.includes(10));
+
+
+
+
+
+
+
+
+
 //================== #39 (02:41:58) array.forEach() 🔚 ================
 console.log("============= #39 (02:41:58) array.forEach() 🔚================");
 
@@ -1084,6 +1191,28 @@ function capitalize(element, index, array){
 function print(element){
     console.log(element);
 }
+
+
+// another example finding the alphabets how many times return in the array 
+let alphabets = ["a", "a", "b", "a", "b", "a", "c", "b", "a"];
+let count2 = [];
+
+alphabets.forEach(item => {
+    if(count2[item]){//in hear we using a if else statement to find if the element how many times repeat again
+        count2[item]++; // if the item alrady in the array it will add 1 
+    }
+    else{
+        count2[item] = 1;
+    }
+});
+console.log(count2);
+
+
+
+
+
+
+
 
 //================== #40 (02:45:19) array.map() ⚙️ ================
 console.log("============= #40 (02:45:19) array.map() ⚙️================");
@@ -1109,6 +1238,34 @@ function print(element){
 
 
 
+// another example for map method
+
+let products = [
+    {
+        name: "dell",
+        price: 10000,
+        count: 3
+    }, {
+        name: "aspire",
+        price: 20000,
+        count: 4
+    }, {
+        name: "microSoft",
+        price: 40000,
+        count: 1
+    }
+];
+
+let totalProductValue = products.map(item => {
+    return item.price * item.count
+})
+console.log(totalProductValue);
+
+
+
+
+
+
 //================== #41 (02:48:10) array.filter() 🗑️ ================
 console.log("============= #41 (02:48:10) array.filter() 🗑️================");
 
@@ -1128,6 +1285,65 @@ function print(element){
 
 
 
+
+// another example for filter method
+let numbers4 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+
+let even = numbers4.filter(item => {
+    return item % 2 === 0; // to find even numbers4 and to find odd numbers remove === 0
+});
+console.log(even);
+
+
+
+
+
+// another example
+let people = [
+    {
+        name: "akash",
+        age: 24
+    }, {
+        name: "rahul",
+        age: 27
+    }, {
+        name: "dcrux",
+        age: 18
+    }, {
+        name: "surya",
+        age: 15
+    }, {
+        name:"aakaash",
+        age: 14  
+    }
+];
+
+let adult2 = people.filter(item =>  item.age >= 18
+);
+console.log(...adult2);
+
+
+
+
+
+
+
+// another example //in this program we will remove the duplicates and arrange the remenine
+
+let numbers1 = [1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 4, 5, 6, 7, 4, 5, 6, 7,8];
+
+let sortIt = numbers1.filter((item, index, array) => {
+    return array.indexOf(item) === index;
+         /*         1       */    /* 2  */
+   // in the above line  the '1' program is to find the index of the item once we run the peogram the place of the item is filled with the array values like 1 , 2, 3 etc but the starting point the item is filled with the first value 1 and after that we find the index of the item because we include the indexOf(1) infront of the bracket and we are going to find the index of the item 1 and the index of the item 1 is 0 , and and the index of 2 is 0 , and index of 3 is 0 too but after that the 4th value comes the indexOf 1 is 1 because the first one alredy comes and in the "2nd" statment the indexOf(item) === index if the item comes the first time the index is 0 and if the same number comes second time its index is 1                    
+});
+console.log(sortIt);
+
+
+
+
+
+
 //================== #42 (02:50:21) array.reduce() 🔁 ================
 console.log("============= #42 (02:50:21) array.reduce() 🔁================");
 
@@ -1139,6 +1355,88 @@ function checkOut(aTotal, element){
    return aTotal + element;
 }
 console.log(aTotal);
+
+
+
+
+
+// another example for reduce
+let numbers2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+
+let total1 = numbers2.reduce((accumulator, item) => {
+    return accumulator + item;
+});
+console.log(total1);
+
+
+
+
+
+
+
+
+// another example
+let food1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let sumTotal1 = food1.reduce((currentTotal, item) => {
+    return currentTotal + item;
+} ,1); 
+console.log(sumTotal1);
+
+
+
+
+
+
+// another example 
+let numbers3 = [10, 2, 3, 4, 5, 6, 7];
+
+let max = numbers3.reduce((accumulator, item) => {
+    if(accumulator > item){
+        return accumulator;
+    }
+    else{
+        return value;
+    }
+}/* 1 */);// in this example we cant give avalue in the "1"
+console.log(max);
+
+
+
+
+
+
+// another example
+
+let store = [
+    {
+        product: "laptop",
+        value: 10000,
+        count: 3
+    }, {
+        product: "tab",
+        value: 1000,
+        count: 2
+    }, {
+        product: "phone",
+        value: 20000,
+        count: 1
+    } 
+];
+
+let totalValuStore = store.reduce((accumulator, item) => accumulator + (item.value * item.count), 0);
+ console.log(totalValuStore);
+
+//we can use the regular way also
+ /* let totalValuStore = store.reduce((accumulator, item) => {
+    return accumulator + item.value * item.count
+} , 0);
+console.log(totalValuStore); */
+
+
+
+
+
 
 
 //================== #43 (02:52:33) sort an array of numbers 📋  ================
@@ -1271,3 +1569,8 @@ let pricesa = [5, 10, 20, 30];
 // console.log(totala);
 let totala = pricesa.reduce((totala, element) => totala + element);
 console.log(`This is the totala ${totala}`);
+
+
+
+
+
