@@ -1262,6 +1262,23 @@ let totalProductValue = products.map(item => {
 console.log(totalProductValue);
 
 
+//================== #slice() ⚙️ ==============================
+// slice()
+let numbers5 = [1, 2, 3, 4, 5, 6, 7, 8];
+
+//let firstName = numbers5.slice(-3); // this will select the last 3 elements
+let firstName2 = numbers5.slice(0, 3);
+
+console.log(firstName2);
+
+
+//another example
+
+let participants = ["akash", "surya", "dcrux", "rahul", "kishore", "apata", "mohseen", "indu"];
+
+let winners = participants.slice(0, 3);
+console.log(winners);
+
 
 
 
@@ -1390,13 +1407,14 @@ console.log(sumTotal1);
 
 // another example 
 let numbers3 = [10, 2, 3, 4, 5, 6, 7];
-
+                           /*   4    */
 let max = numbers3.reduce((accumulator, item) => {
-    if(accumulator > item){
-        return accumulator;
+       /*  1   */   
+    if(accumulator > item){// to begine with the accumulator is 0  in this if else statement we are checking out accumulator is grater than item  but in the (2nd) the accumulator is never be grater then item because if we didint declare the value the accumulator will be 0 so if we compared with the item  the item will be grater than the the accumulator  so it fails then it go to the (else) (3) statement and return the value  to the (4) accumulator and again use it in the (1) statement  and the process will be don again and again till the number of elements finished ex first it checks 10 and 2 and 3 .... upto 7 if there is any number after it 
+     /* 2 */   return accumulator;
     }
     else{
-        return value;
+    /* 3 */    return value;
     }
 }/* 1 */);// in this example we cant give avalue in the "1"
 console.log(max);
